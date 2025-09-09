@@ -8,9 +8,9 @@ A native Node.js binding for the Poppler PDF library, providing high-performance
 - 📊 Extract comprehensive document metadata
 - 🔓 Handle password-protected PDFs with unlock functionality
 - 📖 Extract plain text from pages
-- � Get structured text boxes with precise coordinates
+- 🧱 Get structured text boxes with precise coordinates
 - 📋 Export page content to detailed JSON with word-level positioning
-- �🖼️ Render pages to high-quality images (ARGB32 format)
+- 🖼️ Render pages to high-quality images (ARGB32 format)
 - 📐 Get accurate page dimensions, rotation, and properties
 - 🔄 Support for page rotation and duration (for presentations)
 - ⚡ High-performance native C++ implementation
