@@ -1,5 +1,5 @@
 // src/test.ts
-import { Document, Page } from './index';
+import { Document } from './index';
 import * as fs from 'fs';
 
 async function testPopplerBinding() {
