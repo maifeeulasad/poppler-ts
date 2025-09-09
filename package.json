@@ -15,5 +15,13 @@
   "author": "Maifee Ul Asad<maifeeulasad@gmail.com>",
   "license": "MIT",
   "keywords": ["poppler", "pdf", "native", "binding"],
-  "packageManager": "pnpm@10.15.0"
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "node-addon-api": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "node-gyp": "^10.0.0"
+  }
 }
