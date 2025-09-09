@@ -37,8 +37,8 @@ async function demonstrateNewFeatures() {
     }
 
     // Save JSON to file
-    fs.writeFileSync('page_content.json', JSON.stringify(pageJSON, null, 2));
-    console.log('\nSaved page content to page_content.json');
+    fs.writeFileSync('test.json', JSON.stringify(pageJSON, null, 2));
+    console.log('\nSaved page content to test.json');
 
   } catch (error) {
     console.error('Error:', error);
