@@ -20,6 +20,8 @@ public:
   Napi::Value RenderToImage(const Napi::CallbackInfo& info);
   Napi::Value GetRotation(const Napi::CallbackInfo& info);
   Napi::Value GetDuration(const Napi::CallbackInfo& info);
+  Napi::Value GetTextBoxes(const Napi::CallbackInfo& info);
+  Napi::Value ExportToJSON(const Napi::CallbackInfo& info);
   
   // Getters
   poppler::page* GetPage() const { return page_.get(); }
@@ -27,6 +29,10 @@ public:
 private:
   std::unique_ptr<poppler::page> page_;
   static Napi::FunctionReference constructor;
+  
+  // Helper methods
+  std::vector<std::vector<poppler::text_box>> groupTextBoxesIntoLines(
+      std::vector<poppler::text_box>&& textBoxes);
 };
 
 #endif // PAGE_H
