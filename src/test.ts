@@ -77,7 +77,29 @@ async function testPopplerBinding() {
 
       // Save rendered image (example - you'd need additional image processing)
       console.log(`✓ Image data size: ${image.data.length} bytes`);
-    }
+
+      // Export page to JSON and compare with test.json
+      const docJSON = page.exportToJSON();
+      fs.writeFileSync('./test_output.json', JSON.stringify(docJSON, null, 2));
+      console.log('✓ Page exported to JSON as test_output.json');
+      
+      // Read expected test.json and compare
+      if (fs.existsSync('./test.json')) {
+        const expectedJSON = JSON.parse(fs.readFileSync('./test.json', 'utf-8'));
+        const isMatch = JSON.stringify(docJSON) === JSON.stringify(expectedJSON);
+        if (isMatch) {
+          console.log('✓ Test passed: Output matches test.json');
+        } else {
+          console.log('❌ Test failed: Output does not match test.json');
+          console.log('Differences:');
+          // Simple diff - you might want to use a proper diff library
+          console.log('Expected lines:', expectedJSON.lines.length);
+          console.log('Actual lines:', docJSON.lines.length);
+        }
+      } else {
+        console.log('⚠️  test.json not found for comparison');
+      }
+    }    
 
     console.log('\n🎉 All tests completed successfully!');
 
