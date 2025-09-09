@@ -504,18 +504,10 @@
     "python": "/usr/bin/python3",
     "standalone_static_library": 1,
     "user_agent": "pnpm/10.15.0 npm/? node/v24.7.0 linux x64",
-    "userconfig": "/home/maifee/.npmrc",
-    "local_prefix": "/home/maifee/codes/poppler-ts",
-    "prefix": "/home/maifee/.nvm/versions/node/v24.7.0",
-    "npm_version": "11.5.1",
     "registry": "https://registry.npmjs.org/",
-    "cache": "/home/maifee/.npm",
     "node_gyp": "/home/maifee/.local/share/pnpm/.tools/pnpm/10.15.0/node_modules/pnpm/dist/node_modules/node-gyp/bin/node-gyp.js",
     "frozen_lockfile": "",
     "verify_deps_before_run": "false",
-    "globalconfig": "/home/maifee/.nvm/versions/node/v24.7.0/etc/npmrc",
-    "init_module": "/home/maifee/.npm-init.js",
-    "global_prefix": "/home/maifee/.nvm/versions/node/v24.7.0",
     "_jsr_registry": "https://npm.jsr.io/"
   }
 }
