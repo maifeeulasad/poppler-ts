@@ -36,6 +36,22 @@
     "pdf-extraction",
     "pdf-rendering"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maifeeulasad/poppler-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maifeeulasad/poppler-ts/issues"
+  },
+  "homepage": "https://github.com/maifeeulasad/poppler-ts#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "os": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
   "packageManager": "pnpm@10.15.0",
   "dependencies": {
     "node-addon-api": "^7.0.0"
