@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist/",
-    "build/Release/poppler_binding.node",
+    "src/cpp/",
+    "binding.gyp",
     "README.md",
     "LICENSE"
   ],
@@ -16,6 +17,8 @@
     "build:ts": "tsc",
     "clean": "node-gyp clean && rm -rf dist",
     "install": "node-gyp rebuild",
+    "postinstall": "npm run build",
+    "prepublishOnly": "npm run build",
     "test": "npx ts-node src/test.ts",
     "example": "npx ts-node src/example.ts",
     "lint": "eslint . --ext .ts,.js",
@@ -27,7 +30,11 @@
     "poppler",
     "pdf",
     "native",
-    "binding"
+    "binding",
+    "typescript",
+    "pdf-parser",
+    "pdf-extraction",
+    "pdf-rendering"
   ],
   "packageManager": "pnpm@10.15.0",
   "dependencies": {
