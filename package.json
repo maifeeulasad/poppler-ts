@@ -14,7 +14,12 @@
   },
   "author": "Maifee Ul Asad<maifeeulasad@gmail.com>",
   "license": "MIT",
-  "keywords": ["poppler", "pdf", "native", "binding"],
+  "keywords": [
+    "poppler",
+    "pdf",
+    "native",
+    "binding"
+  ],
   "packageManager": "pnpm@10.15.0",
   "dependencies": {
     "node-addon-api": "^7.0.0"
