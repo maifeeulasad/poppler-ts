@@ -10,7 +10,8 @@
     "build:ts": "tsc",
     "clean": "node-gyp clean && rm -rf dist",
     "install": "node-gyp rebuild",
-    "test": "npx ts-node src/test.ts"
+    "test": "npx ts-node src/test.ts",
+    "example": "npx ts-node src/example.ts"
   },
   "author": "Maifee Ul Asad<maifeeulasad@gmail.com>",
   "license": "MIT",
