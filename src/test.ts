@@ -52,6 +52,22 @@ async function testPopplerBinding() {
       console.log(`✓ Text extracted (${text.length} characters)`);
       console.log('First 200 characters:', text.substring(0, 200));
       
+      // Get text boxes with coordinates
+      const textBoxes = page.getTextBoxes();
+      console.log(`✓ Found ${textBoxes.length} text boxes`);
+      if (textBoxes.length > 0) {
+        console.log('First text box:', textBoxes[0]);
+      }
+      
+      // Export page content to JSON
+      const pageJSON = page.exportToJSON();
+      console.log('✓ Page exported to JSON');
+      console.log(`Found ${pageJSON.lines.length} lines`);
+      if (pageJSON.lines.length > 0) {
+        console.log('First line:', pageJSON.lines[0].text);
+        console.log(`First line has ${pageJSON.lines[0].words.length} words`);
+      }
+      
       // Render page to image
       const image = page.renderToImage({
         dpi: 150,
