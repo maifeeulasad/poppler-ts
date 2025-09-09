@@ -11,7 +11,9 @@
     "clean": "node-gyp clean && rm -rf dist",
     "install": "node-gyp rebuild",
     "test": "npx ts-node src/test.ts",
-    "example": "npx ts-node src/example.ts"
+    "example": "npx ts-node src/example.ts",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:fix": "eslint . --ext .ts,.js --fix"
   },
   "author": "Maifee Ul Asad<maifeeulasad@gmail.com>",
   "license": "MIT",
@@ -26,7 +28,13 @@
     "node-addon-api": "^7.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.35.0",
     "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.43.0",
+    "@typescript-eslint/parser": "^8.43.0",
+    "eslint": "^9.35.0",
+    "globals": "^16.3.0",
+    "jiti": "^2.5.1",
     "node-gyp": "^10.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.0.0"
