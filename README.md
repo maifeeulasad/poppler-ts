@@ -45,6 +45,31 @@ vcpkg install poppler[cpp]:x64-windows
 
 ## Installation
 
+```bash
+npm install poppler-ts
+```
+
+### Automatic Build Process
+
+When you install the package, it will automatically attempt to build the native addon:
+
+1. **System Check**: The installer checks for Poppler development libraries
+2. **Native Build**: Compiles the C++ binding using node-gyp
+3. **Verification**: Confirms the binary was created successfully
+
+### Manual Build (if automatic build fails)
+
+If the automatic build fails, you can build manually after installing system dependencies:
+
+```bash
+# Install system dependencies first, then:
+npm run build:native
+```
+
+### Development Setup
+
+If you're developing or need the full source:
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/maifeeulasad/poppler-ts.git
@@ -350,6 +375,15 @@ The project includes GitHub Actions workflows for:
 
 Both workflows include the necessary system dependencies for building the native addon.
 
+### Installation Issues
+
+If the automatic build fails during `npm install`:
+
+1. **Install system dependencies** for your platform (see Prerequisites section above)
+2. **Manual build**: Run `npm run build:native` after installing dependencies
+3. **Verify installation**: Check that `build/Release/poppler_binding.node` exists
+4. **Clear cache**: Try `npm cache clean --force` and reinstall
+
 ## Troubleshooting
 
 ### Build Issues
@@ -357,7 +391,8 @@ Both workflows include the necessary system dependencies for building the native
 1. **Missing Poppler libraries**:
    ```bash
    # Ubuntu/Debian
-   sudo apt-get install libpoppler-cpp-dev
+   sudo apt-get update
+   sudo apt-get install libpoppler-cpp-dev build-essential
 
    # macOS
    brew install poppler
