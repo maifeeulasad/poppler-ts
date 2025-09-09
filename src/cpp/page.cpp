@@ -62,7 +62,8 @@ Napi::Value Page::GetText(const Napi::CallbackInfo& info) {
   }
   
   poppler::ustring text = page_->text();
-  std::string utf8_text(text.to_utf8().begin(), text.to_utf8().end());
+  poppler::byte_array utf8_bytes = text.to_utf8();
+  std::string utf8_text(utf8_bytes.data(), utf8_bytes.size());
   return Napi::String::New(env, utf8_text);
 }
 

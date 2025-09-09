@@ -167,7 +167,8 @@ Napi::Value Document::GetMetadata(const Napi::CallbackInfo& info) {
   std::vector<std::string> keys = doc_->info_keys();
   for (const std::string& key : keys) {
     poppler::ustring value = doc_->info_key(key);
-    std::string utf8_value(value.to_utf8().begin(), value.to_utf8().end());
+    poppler::byte_array utf8_bytes = value.to_utf8();
+    std::string utf8_value(utf8_bytes.data(), utf8_bytes.size());
     metadata.Set(key, Napi::String::New(env, utf8_value));
   }
   
