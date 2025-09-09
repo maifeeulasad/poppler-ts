@@ -1,13 +1,19 @@
 {
   "name": "poppler-ts",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Native Node.js binding for Poppler PDF library",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:native && npm run build:ts",
+    "build:native": "node-gyp rebuild",
+    "build:ts": "tsc",
+    "clean": "node-gyp clean && rm -rf dist",
+    "install": "node-gyp rebuild",
+    "test": "node dist/test.js"
   },
-  "keywords": [],
   "author": "Maifee Ul Asad<maifeeulasad@gmail.com>",
   "license": "MIT",
+  "keywords": ["poppler", "pdf", "native", "binding"],
   "packageManager": "pnpm@10.15.0"
 }
