@@ -4,6 +4,12 @@
   "description": "Native Node.js binding for Poppler PDF library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "build/Release/poppler_binding.node",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "npm run build:native && npm run build:ts",
     "build:native": "node-gyp rebuild",
