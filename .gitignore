@@ -140,3 +140,5 @@ vite.config.ts.timestamp-*
 
 # test pdf fils
 *.pdf
+# test json fils
+*.json
