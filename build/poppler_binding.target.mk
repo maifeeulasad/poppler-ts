@@ -46,7 +46,7 @@ INCS_Debug := \
 	-I/home/maifee/.cache/node-gyp/24.7.0/deps/uv/include \
 	-I/home/maifee/.cache/node-gyp/24.7.0/deps/zlib \
 	-I/home/maifee/.cache/node-gyp/24.7.0/deps/v8/include \
-	-I/home/maifee/codes/poppler-ts/node_modules/.pnpm/node-addon-api@7.1.1/node_modules/node-addon-api \
+	-I/home/maifee/codes/poppler-ts2/node_modules/.pnpm/node-addon-api@7.1.1/node_modules/node-addon-api \
 	-I/usr/include/poppler/cpp \
 	-I/usr/local/include/poppler/cpp
 
@@ -92,7 +92,7 @@ INCS_Release := \
 	-I/home/maifee/.cache/node-gyp/24.7.0/deps/uv/include \
 	-I/home/maifee/.cache/node-gyp/24.7.0/deps/zlib \
 	-I/home/maifee/.cache/node-gyp/24.7.0/deps/v8/include \
-	-I/home/maifee/codes/poppler-ts/node_modules/.pnpm/node-addon-api@7.1.1/node_modules/node-addon-api \
+	-I/home/maifee/codes/poppler-ts2/node_modules/.pnpm/node-addon-api@7.1.1/node_modules/node-addon-api \
 	-I/usr/include/poppler/cpp \
 	-I/usr/local/include/poppler/cpp
 
