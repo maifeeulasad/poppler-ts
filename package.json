@@ -52,6 +52,7 @@
     "win32"
   ],
   "packageManager": "pnpm@10.15.0",
+  "hasInstallScript": true,
   "dependencies": {
     "node-addon-api": "^7.0.0"
   },
